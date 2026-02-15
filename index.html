@@ -1,76 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Par ou Ímpar</title>
-    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/par-impar.css">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/par-impar.css" />
     <script src="javascript/par-impar.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <main>
-        <header>
-            <div class="container-logotipo">
-                <h1>Par ou Ímpar</h1>
-                <img src="imagens/logotipo.svg" alt="Par ou Ímpar">
-            </div>
-            <p class="container-pontuacao">
-                Sua pontuação: <span class="pontuacao">0</span>
-            </p>
-        </header>
+  <body>
+    <main class="conteudo-principal">
+      <header class="cabecalho">
+        <div class="container-logotipo">
+          <h1 class="titulo-principal">Par ou Ímpar</h1>
+          <img
+            src="imagens/logotipo.svg"
+            alt="Par ou Ímpar"
+            class="imagem-logotipo"
+          />
+        </div>
+        <p class="container-pontuacao">
+          Sua pontuação: <span id="pontuacao" class="pontuacao">0</span>
+        </p>
+      </header>
 
-        <section>
-            <h2>
-                Iniciar Partida <i class="bi bi-play-btn"></i>
-            </h2>
-            <form novalidate>
-                <label for="numero-jogador" class="label">
-                    Insira um número entre 0 e 5 <span class="campo-obrigatorio">*</span>
-                </label>
-                <input type="number" name="numero-jogador" id="numero-jogador" placeholder="Exemplo: 2" min="0" max="5"
-                    step="1" required>
-                <fieldset>
-                    <legend class="label">
-                        Selecione uma opção <span class="campo-obrigatorio">*</span>
-                    </legend>
-                    <input type="radio" name="opcao" id="par" value="Par" checked>
-                    <label for="par" class="label-opcao">Par</label>
-                    <input type="radio" name="opcao" id="impar" value="Ímpar">
-                    <label for="impar" class="label-opcao">Ímpar</label>
-                </fieldset>
-                <button type="submit">
-                    Jogar <i class="bi bi-controller"></i>
-                </button>
-            </form>
-        </section>
+      <section class="secao-partida">
+        <h2 class="titulo-secao-partida">
+          Iniciar Partida <i class="bi bi-play-btn"></i>
+        </h2>
+        <form id="formulario" novalidate>
+          <label for="campo-numero-jogador" class="label-geral">
+            Insira um número entre 0 e 5
+            <span class="campo-obrigatorio">*</span>
+          </label>
+          <input
+            type="number"
+            name="numero-jogador"
+            id="campo-numero-jogador"
+            class="campo-numero-jogador"
+            placeholder="Exemplo: 2"
+            min="0"
+            max="5"
+            step="1"
+            required
+          />
+          <fieldset class="container-opcoes">
+            <legend class="label-geral">
+              Escolha uma opção <span class="campo-obrigatorio">*</span>
+            </legend>
+            <input
+              type="radio"
+              name="opcao"
+              id="campo-par"
+              class="campo-opcao"
+              value="Par"
+              checked
+            />
+            <label for="campo-par" class="label-campo-opcao">Par</label>
+            <input
+              type="radio"
+              name="opcao"
+              id="campo-impar"
+              class="campo-opcao"
+              value="Ímpar"
+            />
+            <label for="campo-impar" class="label-campo-opcao">Ímpar</label>
+          </fieldset>
+          <button type="submit" class="botao botao-envia-formulario">
+            Jogar <i class="bi bi-controller"></i>
+          </button>
+        </form>
+      </section>
 
-        <footer>
-            <p class="copyright">
-                Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank">Vitor Souza</a>
-            </p>
-        </footer>
+      <footer class="rodape">
+        <p class="copyright">
+          Desenvolvido por
+          <a
+            href="https://www.github.com/vitorgabsouza"
+            target="_blank"
+            class="link-copyright"
+            >Vitor Souza</a
+          >
+        </p>
+      </footer>
     </main>
 
-    <dialog>
-        <div class="container-conteudo-modal">
-            <h3>
-                Aviso <i class="bi bi-exclamation-triangle"></i>
-            </h3>
-            <p class="texto-modal"></p>
-            <button type="button">
-                Fechar <i class="bi bi-x-square"></i>
-            </button>
-        </div>
+    <dialog id="modal" class="modal">
+      <div class="container-conteudo-modal">
+        <h3 class="titulo-modal">
+          Aviso <i class="bi bi-exclamation-triangle"></i>
+        </h3>
+        <p id="texto-modal" class="texto-modal"></p>
+        <button
+          type="button"
+          id="botao-fecha-modal"
+          class="botao botao-fecha-modal"
+        >
+          Fechar <i class="bi bi-x-square"></i>
+        </button>
+      </div>
     </dialog>
-</body>
-
+  </body>
 </html>

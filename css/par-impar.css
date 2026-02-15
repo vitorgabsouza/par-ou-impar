@@ -1,251 +1,259 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    text-align: justify;
-    text-justify: inter-word;
-    hyphens: auto;
-    line-height: 1.5;
-    color: #333;
-    background-image: linear-gradient(180deg, #375d6e, #2092c3);
-    background-repeat: no-repeat;
-    min-height: 100dvh;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-image: linear-gradient(180deg, #375d6e, #2092c3);
+  background-repeat: no-repeat;
+  min-height: 100dvh;
 }
 
-main {
-    background-color: #fff;
-    width: 40rem;
-    max-width: 90%;
-    padding: 1.2rem;
-    border-radius: 8px;
-    margin: 1.2rem auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.conteudo-principal {
+  background-color: #fff;
+  width: 40rem;
+  max-width: 90%;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin: 1.2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-header {
-    text-align: center;
-    margin-bottom: 1.2rem;
+.cabecalho {
+  text-align: center;
+  margin-bottom: 1.2rem;
 }
 
 .container-logotipo {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
-img {
-    display: inline-block;
-    width: 4rem;
-    max-width: 100%;
-    height: auto;
+.titulo-principal {
+  font-size: 2.8rem;
 }
 
-h1 {
-    font-size: 2.8rem;
+.imagem-logotipo {
+  width: 4rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .container-pontuacao {
-    font-size: 1.6rem;
-}
-
-span {
-    display: inline-block;
+  font-size: 1.6rem;
 }
 
 .pontuacao {
-    font-weight: bold;
+  display: inline-block;
+  font-weight: bold;
 }
 
-h2 {
-    font-size: 2.4rem;
-    text-align: center;
-    margin-bottom: 1.2rem;
+.secao-partida {
+  margin-bottom: 1.2rem;
 }
 
-i {
-    display: inline-block;
-    pointer-events: none;
+.titulo-secao-partida {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
 }
 
-form {
-    margin-bottom: 1.6rem;
+.bi {
+  display: inline-block;
+  pointer-events: none;
 }
 
-label,
-.label {
-    display: inline-block;
-    font-size: 1.6rem;
-}
-
-.label {
-    margin-bottom: 1.6rem;
+.label-geral {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
 }
 
 .campo-obrigatorio {
-    color: #dc3545;
+  color: #dc3545;
 }
 
-input {
-    font-family: unset;
-    color: unset;
+.campo-numero-jogador {
+  display: block;
+  font-family: unset;
+  font-size: 1.2rem;
+  color: unset;
+  width: 100%;
+  padding: 1.2rem 1rem;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
 }
 
-input[type='number'] {
-    display: block;
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 1.2rem 1rem;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-    margin-bottom: 1.6rem;
+.campo-numero-jogador:focus {
+  border-color: #2092c3;
+  outline: none;
+  box-shadow: 0 0 10px #2092c3;
 }
 
-input[type='number']:focus {
-    border-color: #2092c3;
-    outline: none;
-    box-shadow: 0 0 10px #2092c3;
+.container-opcoes {
+  border: none;
+  margin-bottom: 1.2rem;
 }
 
-fieldset {
-    border: none;
-    margin-bottom: 1.6rem;
+.campo-opcao {
+  display: inline-block;
+  margin-right: 0.4rem;
 }
 
-input[type='radio'] {
-    display: inline-block;
-    margin-right: 0.4rem;
+.label-campo-opcao {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 0.4rem;
 }
 
-.label-opcao {
-    margin-right: 0.4rem;
+.label-campo-opcao:last-child {
+  margin: 0;
 }
 
-.label-opcao:last-child {
-    margin: 0;
+.botao {
+  font-family: unset;
+  color: #fff;
+  padding: 1.2rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
 }
 
-button {
-    font-family: unset;
-    color: #fff;
-    padding: 1.2rem 1.4rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
+.botao-envia-formulario {
+  background-color: #337a98;
 }
 
-button[type='submit'] {
-    background-color: #337a98;
+.botao-envia-formulario:hover {
+  background-color: #375d6e;
 }
 
-button[type='submit']:hover {
-    background-color: #375d6e;
-}
-
-footer {
-    text-align: center;
+.rodape {
+  text-align: center;
 }
 
 .copyright {
-    font-style: italic;
-    font-size: 1.6rem;
+  font-style: italic;
+  font-size: 1.6rem;
 }
 
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: #00a6ed;
+.link-copyright {
+  display: inline-block;
+  text-decoration: none;
+  color: #00a6ed;
 }
 
-a:hover {
-    text-decoration: underline;
+.link-copyright:hover {
+  text-decoration: underline;
 }
 
-dialog {
-    transform: scale(0.85);
-    width: 40rem;
-    max-width: 90%;
-    padding: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    margin: auto;
-    opacity: 0;
-    transition: display 0.5s allow-discrete, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+.modal {
+  transform: scale(0.85);
+  width: 40rem;
+  max-width: 90%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  margin: auto;
+  opacity: 0;
+  transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
 }
 
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+  transition:
+    display 0.5s allow-discrete,
+    overlay 0.5s allow-discrete,
+    background-color 0.5s ease-in,
+    backdrop-filter 0.5s ease-in-out;
 }
 
-dialog[open] {
-    transform: scale(1);
-    opacity: 1;
+.modal[open] {
+  transform: scale(1);
+  opacity: 1;
 }
 
-dialog[open]::backdrop {
-    opacity: 1;
+.modal[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 }
 
 .container-conteudo-modal {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-h3 {
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid #bbb;
+.titulo-modal {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #bbb;
 }
 
 .texto-modal {
-    font-size: 1.6rem;
-    min-height: 4rem;
+  font-size: 1.6rem;
+  min-height: 4rem;
 }
 
-button[type='button'] {
-    align-self: flex-end;
-    background-color: #dc3545;
+.jogador {
+  font-weight: bold;
+  color: #337a98;
 }
 
-button[type='button']:hover {
-    background-color: #c82333;
+.cpu {
+  font-weight: bold;
+  color: #c82333;
+}
+
+.botao-fecha-modal {
+  align-self: flex-end;
+  background-color: #dc3545;
+}
+
+.botao-fecha-modal:hover {
+  background-color: #c82333;
 }
 
 @media (min-width: 992px) {
-    html {
-        font-size: 66.5%;
-    }
+  html {
+    font-size: 66.5%;
+  }
 }
 
 @media (min-width: 1400px) {
-    html {
-        font-size: 70.5%;
-    }
+  html {
+    font-size: 70.5%;
+  }
 }
 
 @starting-style {
-    dialog[open] {
-        transform: scale(0.85);
-        opacity: 0;
-    }
+  .modal[open] {
+    transform: scale(0.85);
+    opacity: 0;
+  }
 
-    dialog[open]::backdrop {
-        opacity: 0;
-    }
+  .modal[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
+  }
 }
