@@ -13,7 +13,61 @@
 		<script src="javascript/script.js" defer></script>
 	</head>
 	<body>
-		<h1>Olá, mundo</h1>
-		<i class="bi bi-list"></i>
+		<main>
+			<header>
+				<div>
+					<h1>Par ou ímpar</h1>
+					<img src="imagens/logotipo.svg" alt="Par ou ímpar">
+				</div>
+				<p>
+					Sua pontuação: <span>0</span>
+				</p>
+			</header>
+			<section>
+				<h2>
+					Começar jogo <i class="bi bi-play-btn"></i>
+				</h2>
+				<form novalidate>
+					<label for="campo-do-numero-do-jogador">
+						Digite um número inteiro entre 0 e 5 <span>*</span>
+					</label>
+					<input type="number" name="numero-do-jogador" id="campo-do-numero-do-jogador" placeholder="Exemplo: 5" min="0" max="5" step="1" required>
+					<fieldset>
+						<legend>
+							Selecione uma opção <span>*</span>
+						</legend>
+						<div>
+							<div>
+								<input type="radio" name="campo-de-opcao" id="campo-de-opcao-par" value="Par" checked>
+								<label for="campo-de-opcao-par">Par</label>
+							</div>
+							<div>
+								<input type="radio" name="campo-de-opcao" id="campo-de-opcao-impar" value="Ímpar">
+								<label for="campo-de-opcao-impar">Ímpar</label>
+							</div>
+						</div>
+					</fieldset>
+					<button type="submit">
+						Jogar <i class="bi bi-controller"></i>
+					</button>
+				</form>
+			</section>
+			<footer>
+				<p>
+					Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank">Vitor Souza</a>
+				</p>
+			</footer>
+		</main>
+		<dialog>
+			<div>
+				<h3>
+					Atenção <i class="bi bi-exclamation-triangle"></i>
+				</h3>
+				<p></p>
+				<button type="button">
+					Fechar <i class="bi bi-x-square"></i>
+				</button>
+			</div>
+		</dialog>
 	</body>
 </html>
