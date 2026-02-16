@@ -13,27 +13,27 @@
     <script src="javascript/funcoes.js" defer></script>
 </head>
 <body>
-    <main>
-        <header>
-            <div>
+    <main class="conteudo-principal">
+        <header class="cabecalho">
+            <div class="area-logotipo">
                 <h1>Par ou ímpar</h1>
                 <img src="imagens/logotipo.svg" alt="Logotipo do site">
             </div>
-            <p>
+            <p class="area-pontuacao">
                 Sua pontuação: <span>0</span>
             </p>
         </header>
-        <section>
+        <section class="secao-jogo">
             <h2>
                 Iniciar partida <i class="bi bi-play-btn"></i>
             </h2>
-            <form novalidate>
-                <label for="campo-numero-jogador">
+            <form class="form" novalidate>
+                <label for="campo-numero-jogador" class="rotulo">
                     Insira um número entre 0 e 5 <span>*</span>
                 </label>
-                <input type="number" name="numero-jogador" id="campo-numero-jogador" placeholder="Exemplo: 2" min="0" max="5" step="1" required>
-                <fieldset>
-                    <legend>
+                <input type="number" name="numero-jogador" id="campo-numero-jogador" class="campo-numero-jogador" placeholder="Exemplo: 2" min="0" max="5" step="1" required>
+                <fieldset class="area-campos-opcao">
+                    <legend class="rotulo">
                         Escolha uma opção <span>*</span>
                     </legend>
                     <input type="radio" name="opcao" id="campo-par" value="Par" checked>
@@ -46,14 +46,14 @@
                 </button>
             </form>
         </section>
-        <footer>
-            <p>
+        <footer class="rodape">
+            <p class="direitos-autorais">
                 Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank">Vitor Souza</a>
             </p>
         </footer>
     </main>
-    <dialog>
-        <div>
+    <dialog class="modal">
+        <div class="area-conteudo-modal">
             <h3>
                 Atenção <i class="bi bi-exclamation-triangle"></i>
             </h3>

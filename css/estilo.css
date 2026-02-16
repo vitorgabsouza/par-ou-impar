@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.conteudo-principal {
+    width: 40rem;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin: 1.2rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.area-logotipo {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.area-logotipo h1 {
+    font-size: 2.8rem;
+}
+
+.area-logotipo img {
+    width: 4rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.area-pontuacao {
+    font-size: 1.6rem;
+}
+
+.area-pontuacao span {
+    font-weight: bold;
+}
+
+.secao-jogo {
+    margin-bottom: 1.2rem;
+}
+
+.secao-jogo h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.form button {
+    font-family: unset;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #617f9d;
+    padding: 1.4rem 1.6rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.form button:hover {
+    background-color: #345373;
+}
+
+.rotulo {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.rotulo span {
+    color: #dc3545;
+}
+
+.campo-numero-jogador {
+    display: block;
+    font-family: unset;
+    font-size: 1.4rem;
+    color: unset;
+    width: 100%;
+    padding: 1.4rem 1.2rem;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+
+.campo-numero-jogador:focus {
+    border-color: #617f9d;
+    outline: none;
+    box-shadow: 0 0 10px #617f9d;
+}
+
+.area-campos-opcao {
+    border: none;
+    margin-bottom: 1.2rem;
+}
+
+.area-campos-opcao input {
+    margin-right: 0.4rem;
+}
+
+.area-campos-opcao label {
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
+}
+
+.area-campos-opcao label:last-child {
+    margin: 0;
+}
+
+.rodape {
+    text-align: center;
+}
+
+.direitos-autorais {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.direitos-autorais a {
+    text-decoration: none;
+    color: #345373;
+}
+
+.direitos-autorais a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    transform: scale(0.85);
+    width: 40rem;
+    max-width: 90%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    margin: auto;
+    opacity: 0;
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete, background-color 0.5s ease-in-out;
+}
+
+.modal[open] {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.area-conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.area-conteudo-modal h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #bbb;
+}
+
+.area-conteudo-modal p {
+    font-size: 1.6rem;
+    min-height: 4rem;
+}
+
+.area-conteudo-modal button {
+    align-self: flex-end;
+    font-family: unset;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #dc3545;
+    padding: 1.2rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.area-conteudo-modal button:hover {
+    background-color: #c82333;
+}
+
+@starting-style {
+    .modal[open] {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    .modal[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 64.5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 66.5%;
+    }
+}
