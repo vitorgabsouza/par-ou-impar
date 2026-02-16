@@ -202,7 +202,7 @@ body {
 	border-bottom: 1px solid #bbb;
 }
 
-.texto-do-modal {
+#texto-do-modal {
 	font-size: 1.6rem;
 	min-height: 4rem;
 }
