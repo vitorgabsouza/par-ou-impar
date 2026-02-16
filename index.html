@@ -1,67 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Par ou ímpar</title>
-    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <script src="javascript/funcoes.js" defer></script>
-</head>
-<body>
-    <main class="conteudo-principal">
-        <header class="cabecalho">
-            <div class="area-logotipo">
-                <h1>Par ou ímpar</h1>
-                <img src="imagens/logotipo.svg" alt="Logotipo do site">
-            </div>
-            <p id="area-pontuacao" class="area-pontuacao">
-                Sua pontuação: <span>0</span>
-            </p>
-        </header>
-        <section class="secao-jogo">
-            <h2>
-                Iniciar partida <i class="bi bi-play-btn"></i>
-            </h2>
-            <form id="formulario" class="form" novalidate>
-                <label for="campo-numero-jogador" class="rotulo">
-                    Insira um número entre 0 e 5 <span>*</span>
-                </label>
-                <input type="number" name="numero-jogador" id="campo-numero-jogador" class="campo-numero-jogador" placeholder="Exemplo: 2" min="0" max="5" step="1" required>
-                <fieldset class="area-campos-opcao">
-                    <legend class="rotulo">
-                        Escolha uma opção <span>*</span>
-                    </legend>
-                    <input type="radio" name="opcao" id="campo-par" value="Par" checked>
-                    <label for="campo-par">Par</label>
-                    <input type="radio" name="opcao" id="campo-impar" value="Ímpar">
-                    <label for="campo-impar">Ímpar</label>
-                </fieldset>
-                <button type="submit" class="botao">
-                    Jogar <i class="bi bi-controller"></i>
-                </button>
-            </form>
-        </section>
-        <footer class="rodape">
-            <p class="direitos-autorais">
-                Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank">Vitor Souza</a>
-            </p>
-        </footer>
-    </main>
-    <dialog id="modal" class="modal">
-        <div id="area-conteudo-modal" class="area-conteudo-modal">
-            <h3>
-                Atenção <i class="bi bi-exclamation-triangle"></i>
-            </h3>
-            <p></p>
-            <button type="button" class="botao">
-                Fechar <i class="bi bi-x-square"></i>
-            </button>
-        </div>
-    </dialog>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Par ou ímpar</title>
+		<link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="css/estilo.css">
+		<script src="javascript/script.js" defer></script>
+	</head>
+	<body>
+		<h1>Olá, mundo</h1>
+		<i class="bi bi-list"></i>
+	</body>
 </html>
