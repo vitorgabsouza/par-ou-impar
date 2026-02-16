@@ -1,5 +1,256 @@
 @charset "UTF-8";
 
-h1 {
-	color: red;
+:root {
+	--fonte: "Montserrat", Arial, Helvetica, sans-serif;
+	--cor-1: #00a6ed;
+	--cor-2: #2092c3;
+	--cor-3: #337a98;
+	--cor-4: #375d6e;
+	--cor-5: #2d3c43;
+	--cor-6: #2b3033;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--fonte);
+	line-height: 1.5;
+	color: var(--cor-6);
+	background-image: linear-gradient(180deg, var(--cor-3), var(--cor-2));
+	background-repeat: no-repeat;
+	min-height: 100dvh;
+}
+
+.conteudo-principal {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	background-color: #fff;
+	width: 40rem;
+	max-width: 90%;
+	padding: 1.2rem;
+	border-radius: 8px;
+	margin: 1.2rem auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho,
+.rodape {
+	text-align: center;
+}
+
+.area-do-logotipo {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+
+.texto-do-logotipo {
+	font-size: 2.8rem;
+	color: var(--cor-4);
+}
+
+.imagem-do-logotipo {
+	width: 40px;
+	max-width: 100%;
+	height: auto;
+}
+
+.area-da-pontuacao,
+.rotulo-de-um-campo-de-opcao,
+.creditos {
+	font-size: 1.6rem;
+}
+
+#pontuacao {
+	font-weight: bold;
+}
+
+.titulo-da-secao-do-jogo {
+	font-size: 2.4rem;
+	text-align: center;
+	color: var(--cor-4);
+	margin-bottom: 1.2rem;
+}
+
+#formulario,
+.area-do-conteudo-do-modal {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.rotulo-do-campo-do-numero-do-jogador {
+	align-self: flex-start;
+	font-size: 1.6rem;
+}
+
+.campo-obrigatorio {
+	display: inline-block;
+	color: #dc3545;
+}
+
+#campo-do-numero-do-jogador {
+	font-family: unset;
+	font-size: 1.4rem;
+	color: unset;
+	padding: 1.4rem 1.2rem;
+	border: 1px solid #bbb;
+	border-radius: 8px;
+}
+
+#campo-do-numero-do-jogador:focus {
+	border-color: var(--cor-2);
+	outline: none;
+	box-shadow: 0 0 10px var(--cor-2);
+}
+
+.area-dos-campos-de-opcao {
+	border: none;
+}
+
+.legenda-da-area-dos-campos-de-opcao {
+	font-size: 1.6rem;
+	margin-bottom: 1.2rem;
+}
+
+.caixa-dos-campos-de-opcao {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.caixa-de-um-campo-de-opcao {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.botao-que-envia-o-formulario {
+	align-self: flex-start;
+	font-family: unset;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: var(--cor-2);
+	padding: 1.4rem 1.6rem;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.botao-que-envia-o-formulario:hover {
+	background-color: var(--cor-3);
+}
+
+.link-de-creditos {
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--cor-3);
+	transition: color 0.5s ease-in-out;
+}
+
+.link-de-creditos:hover {
+	color: var(--cor-4);
+}
+
+#modal {
+	transform: scale(0.85);
+	width: 40rem;
+	max-width: 90%;
+	max-height: 90%;
+	padding: 1.2rem;
+	border: none;
+	border-radius: 8px;
+	margin: auto;
+	opacity: 0;
+	transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#modal[open] {
+	transform: scale(1);
+	opacity: 1;
+}
+
+#modal::backdrop {
+	background-color: rgba(0, 0, 0, 0);
+	transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete, background-color 0.5s ease-in-out;
+}
+
+#modal[open]::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titulo-do-modal {
+	font-size: 2rem;
+	text-align: center;
+	color: var(--cor-4);
+	padding-bottom: 1.2rem;
+	border-bottom: 1px solid #bbb;
+}
+
+.texto-do-modal {
+	font-size: 1.6rem;
+	min-height: 4rem;
+}
+
+#botao-que-fecha-o-modal {
+	align-self: flex-end;
+	font-family: unset;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: #dc3545;
+	padding: 1.2rem 1.4rem;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.5s ease-in-out;
+}
+
+#botao-que-fecha-o-modal:hover {
+	background-color: #c82333;
+}
+
+@starting-style {
+	#modal[open] {
+		transform: scale(0.85);
+		opacity: 0;
+	}
+
+	#modal[open]::backdrop {
+		background-color: rgba(0, 0, 0, 0);
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 64.5%;
+	}
+
+	.imagem-do-logotipo {
+		width: 46px;
+	}
+}
+
+@media (min-width: 1400px) {
+	html {
+		font-size: 66.5%;
+	}
+
+	.imagem-do-logotipo {
+		width: 52px;
+	}
 }

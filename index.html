@@ -13,58 +13,58 @@
 		<script src="javascript/script.js" defer></script>
 	</head>
 	<body>
-		<main>
-			<header>
-				<div>
-					<h1>Par ou ímpar</h1>
-					<img src="imagens/logotipo.svg" alt="Par ou ímpar">
+		<main class="conteudo-principal">
+			<header class="cabecalho">
+				<div class="area-do-logotipo">
+					<h1 class="texto-do-logotipo">Par ou ímpar</h1>
+					<img src="imagens/logotipo.svg" alt="Par ou ímpar" class="imagem-do-logotipo">
 				</div>
-				<p>
-					Sua pontuação: <span>0</span>
+				<p class="area-da-pontuacao">
+					Sua pontuação: <span id="pontuacao">0</span>
 				</p>
 			</header>
 			<section>
-				<h2>
+				<h2 class="titulo-da-secao-do-jogo">
 					Começar jogo <i class="bi bi-play-btn"></i>
 				</h2>
-				<form novalidate>
-					<label for="campo-do-numero-do-jogador">
-						Digite um número inteiro entre 0 e 5 <span>*</span>
+				<form id="formulario" novalidate>
+					<label for="campo-do-numero-do-jogador" class="rotulo-do-campo-do-numero-do-jogador">
+						Digite um número inteiro entre 0 e 5 <span title="Campo obrigatório" class="campo-obrigatorio">*</span>
 					</label>
 					<input type="number" name="numero-do-jogador" id="campo-do-numero-do-jogador" placeholder="Exemplo: 5" min="0" max="5" step="1" required>
-					<fieldset>
-						<legend>
-							Selecione uma opção <span>*</span>
+					<fieldset class="area-dos-campos-de-opcao">
+						<legend class="legenda-da-area-dos-campos-de-opcao">
+							Selecione uma opção <span title="Campo obrigatório" class="campo-obrigatorio">*</span>
 						</legend>
-						<div>
-							<div>
+						<div class="caixa-dos-campos-de-opcao">
+							<div class="caixa-de-um-campo-de-opcao">
 								<input type="radio" name="campo-de-opcao" id="campo-de-opcao-par" value="Par" checked>
-								<label for="campo-de-opcao-par">Par</label>
+								<label for="campo-de-opcao-par" class="rotulo-de-um-campo-de-opcao">Par</label>
 							</div>
-							<div>
+							<div class="caixa-de-um-campo-de-opcao">
 								<input type="radio" name="campo-de-opcao" id="campo-de-opcao-impar" value="Ímpar">
-								<label for="campo-de-opcao-impar">Ímpar</label>
+								<label for="campo-de-opcao-impar" class="rotulo-de-um-campo-de-opcao">Ímpar</label>
 							</div>
 						</div>
 					</fieldset>
-					<button type="submit">
+					<button type="submit" class="botao-que-envia-o-formulario">
 						Jogar <i class="bi bi-controller"></i>
 					</button>
 				</form>
 			</section>
-			<footer>
-				<p>
-					Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank">Vitor Souza</a>
+			<footer class="rodape">
+				<p class="creditos">
+					Desenvolvido por <a href="https://www.github.com/vitorgabsouza" target="_blank" class="link-de-creditos">Vitor Souza</a>
 				</p>
 			</footer>
 		</main>
-		<dialog>
-			<div>
-				<h3>
+		<dialog id="modal">
+			<div class="area-do-conteudo-do-modal">
+				<h3 class="titulo-do-modal">
 					Atenção <i class="bi bi-exclamation-triangle"></i>
 				</h3>
-				<p></p>
-				<button type="button">
+				<p class="texto-do-modal"></p>
+				<button type="button" id="botao-que-fecha-o-modal">
 					Fechar <i class="bi bi-x-square"></i>
 				</button>
 			</div>
