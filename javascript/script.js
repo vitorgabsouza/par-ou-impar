@@ -57,8 +57,8 @@ const comecarJogo = () => {
 	const alternarPontuacao = ({ vencedor }) => {
 		let pontos = Number(pontuacao.textContent.trim());
 
-		if (Number.isNaN(pontos)) {
-			alternarExibicaoDoModal({ mostrar: true, mensagem: 'Erro: Por favor, mantenha a pontuação de forma numérica.' });
+		if (Number.isInteger(pontos)) {
+			alternarExibicaoDoModal({ mostrar: true, mensagem: 'Erro: Por favor, mantenha a pontuação como um número inteiro.' });
 			pontuacao.textContent = 0;
 			return;
 		}
